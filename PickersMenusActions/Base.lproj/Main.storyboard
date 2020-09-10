@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RYf-eE-zVO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17124"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Color Picker-->
+        <scene sceneID="cDH-fW-b2z">
+            <objects>
+                <viewController id="Ukr-VF-qnZ" customClass="ColorPickerViewController" customModule="PickersMenusActions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZY7-E6-gpI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpE-2Z-qLI">
+                                <rect key="frame" x="157" y="124" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ZzK-Jd-1XW"/>
+                                    <constraint firstAttribute="height" constant="100" id="aHO-9I-rd2"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35X-sC-Eux">
+                                <rect key="frame" x="142" y="264" width="130" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="SHe-fg-3S5"/>
+                                    <constraint firstAttribute="height" constant="44" id="yWm-xb-y8p"/>
+                                </constraints>
+                                <state key="normal" title="Pick Another Color"/>
+                                <connections>
+                                    <action selector="pickColor:" destination="Ukr-VF-qnZ" eventType="touchUpInside" id="11v-Yj-Ev3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lKt-1n-zo7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zpE-2Z-qLI" firstAttribute="centerX" secondItem="ZY7-E6-gpI" secondAttribute="centerX" id="71u-ii-qAf"/>
+                            <constraint firstItem="zpE-2Z-qLI" firstAttribute="top" secondItem="lKt-1n-zo7" secondAttribute="top" constant="80" id="N4J-lH-3tb"/>
+                            <constraint firstItem="35X-sC-Eux" firstAttribute="centerX" secondItem="ZY7-E6-gpI" secondAttribute="centerX" id="c6W-xw-13x"/>
+                            <constraint firstItem="35X-sC-Eux" firstAttribute="top" secondItem="zpE-2Z-qLI" secondAttribute="bottom" constant="40" id="riK-Qm-vz3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Color Picker" id="iec-0t-htM"/>
+                    <connections>
+                        <outlet property="colorSampleView" destination="zpE-2Z-qLI" id="3rW-T0-gVs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EVM-IC-XDg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="138.61607142857142"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="rKi-GH-Vik">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="RYf-eE-zVO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Avv-jQ-YdV">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ukr-VF-qnZ" kind="relationship" relationship="viewControllers" id="4Lu-Ah-Tx4"/>
+                        <segue destination="519-iI-YYO" kind="relationship" relationship="viewControllers" id="tVM-Oz-xSg"/>
+                        <segue destination="GGG-Vd-UCC" kind="relationship" relationship="viewControllers" id="uT1-mL-43z"/>
+                        <segue destination="sI2-ZX-RFN" kind="relationship" relationship="viewControllers" id="w1h-Kh-X0C"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m8e-1R-vee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
+        </scene>
+        <!--Actions-->
+        <scene sceneID="uej-MC-0A1">
+            <objects>
+                <viewController id="sI2-ZX-RFN" customClass="ActionsViewController" customModule="PickersMenusActions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ugZ-E1-omX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Cgr-tF-K00"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Actions" id="RO6-oX-iVb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jDE-fy-HmG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2238" y="893"/>
+        </scene>
+        <!--Date Picker-->
+        <scene sceneID="72C-h4-m9L">
+            <objects>
+                <viewController id="519-iI-YYO" customClass="DatePickerViewController" customModule="PickersMenusActions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O3Y-iJ-17J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mNI-Sd-qPd">
+                                <rect key="frame" x="57" y="74" width="300" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="5Ia-KM-1vr"/>
+                                    <constraint firstAttribute="height" constant="31" id="Ctn-IV-OaY"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Compact"/>
+                                    <segment title="Inline"/>
+                                    <segment title="Wheels"/>
+                                </segments>
+                                <connections>
+                                    <action selector="updateDatePicker:" destination="519-iI-YYO" eventType="valueChanged" id="B0Y-SE-w71"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N7m-T6-H31"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mNI-Sd-qPd" firstAttribute="top" secondItem="N7m-T6-H31" secondAttribute="top" constant="30" id="SIc-uy-9f4"/>
+                            <constraint firstItem="mNI-Sd-qPd" firstAttribute="centerX" secondItem="O3Y-iJ-17J" secondAttribute="centerX" id="qSP-th-z7Q"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Date Picker" id="skX-9O-jVB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csp-DA-Z40" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-829" y="893"/>
+        </scene>
+        <!--Menus View Controller-->
+        <scene sceneID="pN5-Lw-acX">
+            <objects>
+                <viewController id="DpG-G1-e4r" customClass="MenusViewController" customModule="PickersMenusActions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gLg-lz-KHU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaM-Nk-2wE">
+                                <rect key="frame" x="172" y="433" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eqg-w8-gfm"/>
+                                    <constraint firstAttribute="width" constant="70" id="qCt-SB-MWi"/>
+                                </constraints>
+                                <state key="normal" title="Tap Me"/>
+                                <connections>
+                                    <action selector="handleTapMeButtonTap:" destination="DpG-G1-e4r" eventType="touchUpInside" id="5mQ-QD-30W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXU-Wc-Gq9">
+                                <rect key="frame" x="155.5" y="493" width="103" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hZs-aA-Z0O"/>
+                                    <constraint firstAttribute="width" constant="103" id="vk5-lu-54i"/>
+                                </constraints>
+                                <state key="normal" title="Deferred Menu"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hgb-BI-V1A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hXU-Wc-Gq9" firstAttribute="centerX" secondItem="gLg-lz-KHU" secondAttribute="centerX" id="7wm-gV-xCw"/>
+                            <constraint firstItem="hXU-Wc-Gq9" firstAttribute="top" secondItem="VaM-Nk-2wE" secondAttribute="bottom" constant="30" id="OMr-86-Bd1"/>
+                            <constraint firstItem="VaM-Nk-2wE" firstAttribute="centerX" secondItem="gLg-lz-KHU" secondAttribute="centerX" id="Qs4-QU-ZhZ"/>
+                            <constraint firstItem="VaM-Nk-2wE" firstAttribute="centerY" secondItem="gLg-lz-KHU" secondAttribute="centerY" id="TUt-rr-gQx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SPA-lD-QUd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="e1x-h5-7Uh">
+                            <connections>
+                                <action selector="handleActionItemTap:" destination="DpG-G1-e4r" id="xNu-nx-VRz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="actionItem" destination="e1x-h5-7Uh" id="wJU-vo-XyO"/>
+                        <outlet property="deferredMenuButton" destination="hXU-Wc-Gq9" id="TjI-dR-kgA"/>
+                        <outlet property="tapMeButton" destination="VaM-Nk-2wE" id="Ha8-F6-TLP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MeD-XP-mYK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="893"/>
+        </scene>
+        <!--Menus-->
+        <scene sceneID="lp0-tl-U9r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GGG-Vd-UCC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Menus" id="7qy-5k-tZQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MmX-VV-9FO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DpG-G1-e4r" kind="relationship" relationship="rootViewController" id="3K6-m7-wuc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jN5-bc-bOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="893"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
